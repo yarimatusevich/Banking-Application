@@ -5,11 +5,11 @@ public class Account {
     private String password;
     private double balance;
 
-    Account(String id, String name, String address, String password, double balance) {
+    Account(String id, String password, String name, String address, double balance) {
         this.id = id;
+        this.password = password;
         this.name = name;
         this.address = address;
-        this.password = password;
         this.balance = balance;
     }
 
