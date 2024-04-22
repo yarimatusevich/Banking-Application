@@ -1,11 +1,11 @@
-public class UserAccount {
+public class Account {
     private final String id;
     private final String name;
     private String address;
     private String password;
     private double balance;
 
-    UserAccount(String id, String name, String address, String password, double balance) {
+    Account(String id, String name, String address, String password, double balance) {
         this.id = id;
         this.name = name;
         this.address = address;
