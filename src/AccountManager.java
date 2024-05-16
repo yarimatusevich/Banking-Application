@@ -1,14 +1,12 @@
-import java.util.HashMap;
-
 public class AccountManager {
     public static void createAccount(String id, String password, String name, String address, double initialDeposit) {
-        Account newAccount = new Account(id, name, password, address, initialDeposit);
+        Account newAccount = new Account(id, password, name, address, initialDeposit);
         // Storing new account
-        AccountDataBase.storeAccount(newAccount);
+        AccountDataBaseUtilities.storeAccount(newAccount);
     }
 
     public static void logIn(String id, String password) {
-        Account current = AccountDataBase.getAccount(id);
+        Account current = AccountDataBaseUtilities.getAccount(id);
 
         if (password.equals(current.getPassword())) {
             System.out.println("Welcome, " + current.getName() + "!");
@@ -16,7 +14,7 @@ public class AccountManager {
     }
 
     public static void deleteAccount(String id) {
-        AccountDataBase.removeAccount(id);
+        AccountDataBaseUtilities.removeAccount(id);
     }
 
     public static void changeAddress(String newAddress) {

@@ -1,4 +1,4 @@
-public class AccountDataBase {
+public class AccountDataBaseUtilities {
 
     public static void storeAccount(Account newAccount) {
         Main.accountDataBase.put(newAccount.getId(), newAccount);
