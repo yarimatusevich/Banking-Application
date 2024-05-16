@@ -1,13 +1,14 @@
-import java.util.HashMap;
 public class AccountDataBase {
 
-    private static HashMap<String, Account> accountDataBase;
-
     public static void storeAccount(Account newAccount) {
-        accountDataBase.put(newAccount.getId(), newAccount);
+        Main.accountDataBase.put(newAccount.getId(), newAccount);
     }
 
     public static void removeAccount(String id) {
-        accountDataBase.remove(id);
+        Main.accountDataBase.remove(id);
+    }
+
+    public static Account getAccount(String id) {
+        return Main.accountDataBase.get(id);
     }
 }
